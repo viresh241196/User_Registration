@@ -24,9 +24,9 @@ public class UserRegistration {
         Matcher matcher = pattern.matcher(phoneNumber);
         return matcher.matches();
     }
-    //rule3-min 8 char & atleast 1 upper case char and 1 number
+    //rule3-min 8 char & atleast 1 upper case char and 1 number and exactly 1 special char
     public static boolean passwordValid(String password){
-        String regx = "[a-z[0-9]{1,}[A-Z]{1,}]{8,}";
+        String regx = "[a-z[0-9]{1,}[A-Z]{1,}[!@#$%^&*]{1}]{8,}";
         Pattern pattern = Pattern.compile(regx);
         Matcher matcher = pattern.matcher(password);
         return matcher.matches();
