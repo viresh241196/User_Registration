@@ -24,6 +24,13 @@ public class UserRegistration {
         Matcher matcher = pattern.matcher(phoneNumber);
         return matcher.matches();
     }
+    //rule1-min 8 char
+    public static boolean passwordValid(String password){
+        String regx = "^[a-zA-Z]{8,}";
+        Pattern pattern = Pattern.compile(regx);
+        Matcher matcher = pattern.matcher(password);
+        return matcher.matches();
+    }
 
     public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
@@ -52,6 +59,13 @@ public class UserRegistration {
         String phone = scan.nextLine();
         if(phoneValid(phone))
             System.out.println("phone number is correct");
+        else
+            System.out.println("invalid");
+
+        System.out.println("Enter your password :");
+        String password = scan.nextLine();
+        if(passwordValid(password))
+            System.out.println("password is correct");
         else
             System.out.println("invalid");
     }
