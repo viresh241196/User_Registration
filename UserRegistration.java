@@ -20,7 +20,7 @@ public class UserRegistration {
         System.out.println("Enter last  Name: ");
         String lastName = scan.nextLine();
         if(nameValid(lastName))
-            System.out.println("First name is valid");
+            System.out.println("Last name is valid");
     }
 }
 
