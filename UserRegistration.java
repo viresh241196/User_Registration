@@ -31,7 +31,6 @@ public class UserRegistration {
         Matcher matcher = pattern.matcher(password);
         return matcher.matches();
     }
-
     public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
         System.out.println("Enter first Name : ");
