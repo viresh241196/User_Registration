@@ -17,6 +17,14 @@ public class UserRegistration {
         Matcher matcher = pattern.matcher(email);
         return matcher.matches();
     }
+    // phone validation
+    public static boolean phoneValid(String phoneNumber){
+        String regx = "^[0-9]{2}[: :][0-9]{10}";
+        Pattern pattern = Pattern.compile(regx);
+        Matcher matcher = pattern.matcher(phoneNumber);
+        return matcher.matches();
+    }
+
     public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
         System.out.println("Enter first Name : ");
@@ -25,7 +33,7 @@ public class UserRegistration {
             System.out.println("First name is valid");
         else
             System.out.println("invalid");
-        
+
         System.out.println("Enter last  Name: ");
         String lastName = scan.nextLine();
         if(nameValid(lastName))
@@ -37,6 +45,13 @@ public class UserRegistration {
         String email = scan.nextLine();
         if(emailValid(email))
             System.out.println("email is correct");
+        else
+            System.out.println("invalid");
+
+        System.out.println("Enter your phone number :");
+        String phone = scan.nextLine();
+        if(phoneValid(phone))
+            System.out.println("phone number is correct");
         else
             System.out.println("invalid");
     }
