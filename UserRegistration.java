@@ -23,10 +23,16 @@ public class UserRegistration {
         String firstName = scan.nextLine();
         if(nameValid(firstName))
             System.out.println("First name is valid");
+        else
+            System.out.println("invalid");
+        
         System.out.println("Enter last  Name: ");
         String lastName = scan.nextLine();
         if(nameValid(lastName))
             System.out.println("last name is valid");
+        else
+            System.out.println("invalid");
+
         System.out.println("Enter your email :");
         String email = scan.nextLine();
         if(emailValid(email))
