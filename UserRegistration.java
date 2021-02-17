@@ -3,19 +3,24 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class UserRegistration {
-    public static boolean firstNameValid(String name) {
+    //method to check name is valid or not
+    public static boolean nameValid(String name) {
         String regx = "^[A-Z][a-zA-Z]{2,}";
         Pattern pattern = Pattern.compile(regx);
         Matcher matcher = pattern.matcher(name);
-        System.out.println(matcher);
         return matcher.matches();
     }
 
     public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
-        System.out.println("Enter firstName : ");
+        System.out.println("Enter first Name : ");
         String firstName = scan.nextLine();
-        System.out.println("First name :"+firstNameValid(firstName));
+        if(nameValid(firstName))
+            System.out.println("First name is valid");
+        System.out.println("Enter last  Name: ");
+        String lastName = scan.nextLine();
+        if(nameValid(lastName))
+            System.out.println("First name is valid");
     }
 }
 
