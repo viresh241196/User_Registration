@@ -4,7 +4,7 @@ import java.util.regex.Pattern;
 
 public class UserRegistration {
     //method to check name is valid or not
-    public static boolean nameValid(String name) {
+        public static boolean nameValid(String name) {
         String regx = "^[A-Z][a-zA-Z]{3,}";
         Pattern pattern = Pattern.compile(regx);
         Matcher matcher = pattern.matcher(name);
